@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@100&family=Playfair:wght@300&family=Roboto:wght@100&display=swap');
+
+
+
+$white100: rgb(255, 255, 255);
+$white90: rgb(254, 253, 251);
+$white80: rgb(253, 251, 247);
+$white70: rgb(252, 249, 243);
+$white60: rgb(251, 247, 239);
+$white50: rgb(250, 245, 235);
+$white40: rgb(249, 243, 231);
+$white30: rgb(248, 241, 227);
+$white20: rgb(247, 239, 223);
+$white10: rgb(246, 237, 219);
+
+$green100: rgb(0, 50, 0);
+$green90: rgb(0, 60, 0);
+$green80: rgb(0, 70, 0);
+$green70: rgb(0, 80, 0);
+$green60: rgb(0, 90, 0);
+$green50: rgb(0, 100, 0);
+$green40: rgb(0, 110, 0);
+$green30: rgb(0, 120, 0);
+$green20: rgb(0, 130, 0);
+$green10: rgb(0, 140, 0);
+
+$brown100: rgb(101, 67, 33);
+$brown90: rgb(111, 77, 43);
+$brown80: rgb(121, 87, 53);
+$brown70: rgb(131, 97, 63);
+$brown60: rgb(141, 107, 73);
+$brown50: rgb(151, 117, 83);
+$brown40: rgb(161, 127, 93);
+$brown30: rgb(171, 137, 103);
+$brown20: rgb(181, 147, 113);
+$brown10: rgb(191, 157, 123);
+
+
+body {
+  background: $white100;
+}
+
+#font{
+  font-family: 'Playfair';
+
+}
+
+#titlefont{
+  font-family: 'Playfair';
+  font-size:60px;
+}
+.searchBar {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 130px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .preset_grid{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.preset_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-gap: 80px;
+}
+
+.socialMedia {
+  display:flex;
+  position: absolute;
+  top:0;
+  right:0;
+  justify-content: space-around;
+  width:100px;
+}
+
+ion-icon {
+  font-size: 20px;
+  color: $green70;
+}
+
+.center {
+  display:flex;
+  justify-content: center;
+}
+
+.buttons {
+  color:$green100;
+  background-color: transparent;
+  border:none;
+  font-size: 15px;
+  text-decoration: underline;
+  margin-bottom:15px;
+
+}
+
+.searchFood{
+  width:400px;
+  height: 30px;
+  border-radius: 3px;
+  margin-bottom: 100px;
+}
+
+.enjoyBtn{
+  background-color: $white30;
+  font-family: 'Playfair';
+  height: 35px;
+  border-radius: 3px;
+}
+
+.recipes {
+  background-color: $white70;
+  border-radius: 10px;
+}
+
+.presetNames {
+  font-family: 'Playfair';
+  display: flex;
+  justify-content: flex-start;
+  font-size: 25px;
+}
+
+.linkfont {
+  font-family: 'Playfair';
+  background-color: $white70;
+  color:$green100
+
+}
+ 
+.info{
+  display:flex;
+  justify-content: space-around;
+}
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.roundedimg{
+  border-radius:10px;
+}
+
+.resultsimg{
+  border-radius:10px;
+  height:250px;
+}
+
+.hover {
+  transition: transform 1.0s ease;
+}
+
+.hover:hover {
+  transform: scale(1.1);
+}
+
+
+
+  
+
+
+
