@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@100&family=Playfair:wght@300&family=Roboto:wght@100&display=swap');
-
-
 
 $white100: rgb(255, 255, 255);
 $white90: rgb(254, 253, 251);
@@ -36,59 +33,62 @@ $brown30: rgb(171, 137, 103);
 $brown20: rgb(181, 147, 113);
 $brown10: rgb(191, 157, 123);
 
-
 body {
   background: $white100;
 }
 
-#font{
+#font {
   font-family: 'Playfair';
-
 }
 
-#titlefont{
+#titlefont {
   font-family: 'Playfair';
-  font-size:60px;
+  font-size: 60px;
 }
 .searchBar {
   display: flex;
   position: relative;
   justify-content: center;
-  
 }
 
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 130px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
+// .grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   grid-gap: 130px;
+//   margin-left: 30px;
+//   margin-right: 30px;
+// }
 
 @media screen and (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  .preset_grid{
+  .preset_grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 .preset_grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-rows: 300px 300px 300px;
+
+  grid-template-areas:
+    'head head2 head3'
+    'mid mid2 mid3'
+    'foot foot2 foot3';
   grid-gap: 80px;
+  margin-left: 100px;
+  margin-right: 80px;
 }
 
 .socialMedia {
-  display:flex;
+  display: flex;
   position: absolute;
-  top:0;
-  right:0;
+  top: 0;
+  right: 0;
   justify-content: space-around;
-  width:100px;
+  width: 100px;
 }
 
 ion-icon {
@@ -97,28 +97,27 @@ ion-icon {
 }
 
 .center {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
 .buttons {
-  color:$green100;
+  color: $green100;
   background-color: transparent;
-  border:none;
+  border: none;
   font-size: 15px;
   text-decoration: underline;
-  margin-bottom:15px;
-
+  margin-bottom: 15px;
 }
 
-.searchFood{
-  width:400px;
+.searchFood {
+  width: 400px;
   height: 30px;
   border-radius: 3px;
   margin-bottom: 100px;
 }
 
-.enjoyBtn{
+.enjoyBtn {
   background-color: $white30;
   font-family: 'Playfair';
   height: 35px;
@@ -140,12 +139,11 @@ ion-icon {
 .linkfont {
   font-family: 'Playfair';
   background-color: $white70;
-  color:$green100
-
+  color: $green100;
 }
- 
-.info{
-  display:flex;
+
+.info {
+  display: flex;
   justify-content: space-around;
 }
 .recipe-details {
@@ -153,26 +151,19 @@ ion-icon {
   flex-direction: column;
 }
 
-.roundedimg{
-  border-radius:10px;
+.roundedimg {
+  border-radius: 10px;
 }
 
-.resultsimg{
-  border-radius:10px;
-  height:250px;
+.resultsimg {
+  border-radius: 10px;
+  height: 250px;
 }
 
 .hover {
-  transition: transform 1.0s ease;
+  transition: transform 1s ease;
 }
 
 .hover:hover {
   transform: scale(1.1);
 }
-
-
-
-  
-
-
-
