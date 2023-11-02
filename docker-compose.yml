@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  frontend:
+    image: frontend # Use the name of your frontend image
+    ports:
+      - "30:30" # Map port 80 from the container to port 80 on the host
+    depends_on:
+      - backend
+
+  backend:
+    image: backend # Use the name of your backend image
