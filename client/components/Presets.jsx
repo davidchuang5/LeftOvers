@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import Genre from './GenrePage.jsx';
-import { PresetRecipes } from './PresetRecipes.jsx';
-import { useNavigate, Link, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { PresetRecipes } from "./PresetRecipes.jsx";
+import { useNavigate, Link, Route, Routes } from "react-router-dom";
 
 const Preset = ({ app_id, app_key, genre, image, key }) => {
   const [recipes, setRecipes] = useState([]);
@@ -15,7 +14,7 @@ const Preset = ({ app_id, app_key, genre, image, key }) => {
         const result = await req.json();
         setRecipes(result.hits.map((hit) => hit.recipe));
       } catch (err) {
-        console.log('Error:', err);
+        console.log("Error:", err);
       }
     }
     fetchData();
@@ -24,12 +23,11 @@ const Preset = ({ app_id, app_key, genre, image, key }) => {
   return (
     <>
       <div id="Genres">
-        <Link image={image} genre={genre} style={{ textDecoration: 'none' }} to="/PresetRecipes">
+        <Link genre={genre} style={{ textDecoration: "none" }} to="/PresetRecipes">
           <div className="hover">
-            <h1 id="font" className="presetNames" style={{ color: 'black' }}>
+            <h1 id="font" className="presetNames" style={{ color: "black" }}>
               {genre}
             </h1>
-
             {recipes.length > 0 && <img src={recipes[0].image} className="roundedimg" />}
           </div>
         </Link>
