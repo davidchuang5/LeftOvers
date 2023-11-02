@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Recipe from './Recipe.jsx';
-import PresetContainer from './PresetContainer.jsx';
-import { SocialMedia } from './SocialMedia.jsx';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import Recipe from "./Recipe.jsx";
+import PresetContainer from "./PresetContainer.jsx";
+import { SocialMedia } from "./SocialMedia.jsx";
 
-const app_id = '52e7be0b';
-const app_key = '7de187828ceb784576dcf3a5a70fd57a';
+const app_id = "52e7be0b";
+const app_key = "7de187828ceb784576dcf3a5a70fd57a";
 
 export const SearchBar = () => {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   const [isLoaded, setIsLoaded] = useState(true);
   const url = `https://api.edamam.com/search?q=${query}&app_id=${app_id}&app_key=${app_key}`;
@@ -24,11 +23,11 @@ export const SearchBar = () => {
       setRecipes(result.hits.map((hit) => hit.recipe));
       setIsLoaded(false);
     } catch (err) {
-      console.log('Error:', err);
+      console.log("Error:", err);
     }
   };
   useEffect(() => {
-    console.log('Recipes:', recipes);
+    console.log("Recipes:", recipes);
   }, [recipes]);
 
   const onChange = (e) => {
