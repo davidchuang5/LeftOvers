@@ -2,7 +2,7 @@
 Getting Started:
 1. Run command "npm install"
 2. Run command "npm start" to view in production mode
-3. Run command "npm start" to view in development mode
+3. Run command "npm run dev" to view in development mode
 
 Navigation:
 1. The homepage has presets containing recipes of that category
